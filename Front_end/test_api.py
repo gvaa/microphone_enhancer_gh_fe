@@ -13,9 +13,9 @@ col5, col6 = st.columns([10,1], gap='medium')
 with col5:
     st.subheader('Microphone quality enhancer')
     st.caption('enhance the quality of your microphone')
-#with col6:
-#    with Image.open('microphone-162205_1280.png') as micro:
-#        st.image(micro, width = 40)
+with col6:
+    with Image.open(requests.get('https://raw.githubusercontent.com/gvaa/microphone_enhancer_gh_fe/master/Front_end/microphone-162205_1280.png', stream=True).raw) as micro:
+        st.image(micro, width = 40)
 
 st.divider()
 
