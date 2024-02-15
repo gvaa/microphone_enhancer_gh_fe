@@ -14,7 +14,7 @@ with col5:
     st.subheader('Microphone quality enhancer')
     st.caption('enhance the quality of your microphone')
 with col6:
-    with Image.open('../Front_end/microphone-162205_1280.png') as micro:
+    with Image.open('microphone-162205_1280.png') as micro:
         st.image(micro, width = 40)
 
 st.divider()
