@@ -44,7 +44,7 @@ if uploaded_file is not None:
         st.audio(uploaded_file)
 
     with col2:
-        with st.spinner(f"Enhancing with {enhancer.split('/')[1]}:"):
+        with st.spinner(f"Enhancing with {enhancer.split('/')[1]}..."):
             cleaned = requests.post(upload_url,
                                 files=file,
                                 data=params).json()
