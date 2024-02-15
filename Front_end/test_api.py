@@ -3,7 +3,7 @@ import requests
 from PIL import Image
 import streamlit as st
 
-url = "http://127.0.0.1:8000/" # "https://micenhancerapi-3t3dih6maa-oa.a.run.app/", "http://127.0.0.1:8000/"
+url = "https://micenhancerapi-3t3dih6maa-oa.a.run.app/" # "https://micenhancerapi-3t3dih6maa-oa.a.run.app/", "http://127.0.0.1:8000/"
 upload_url = url + 'upload_file'
 serve_out_url = url + 'audio_out'
 serve_in_url = url + 'audio_in'
