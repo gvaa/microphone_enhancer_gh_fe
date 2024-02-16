@@ -31,7 +31,7 @@ if uploaded_file is not None:
     params = {'enhancer': enhancer}
     col1, col2 = st.columns(2, gap='medium')
     with col1:
-        st.markdown(f'<p style="background-color:#fcefec;color:#972007;border-radius:7px;"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Uploaded noisy audio:<br> <br> </p>', unsafe_allow_html=True) #st.write("Uploaded noisy audio:")
+        st.markdown(f'<p style="background-color:#fcefec;color:#972007;border-radius:7px;"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Uploaded noisy audio:<br> <br> </p>', unsafe_allow_html=True)
     col3, col4 = st.columns(2, gap='medium')
     with col3:
         st.audio(uploaded_file)
