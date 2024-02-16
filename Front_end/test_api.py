@@ -16,11 +16,7 @@ with col5:
 with col6:
     with Image.open(requests.get('https://raw.githubusercontent.com/gvaa/microphone_enhancer_gh_fe/master/Front_end/microphone-162205_1280.png', stream=True).raw) as micro:
         st.image(micro, width = 40)
-
 st.divider()
-
-
-
 enhancer = st.radio("Select enhancer:",
                     ["speechbrain/sepformer-dns4-16k-enhancement",
                      "speechbrain/sepformer-wham16k-enhancement",
@@ -29,9 +25,7 @@ enhancer = st.radio("Select enhancer:",
                     index=0,
                     )
 uploaded_file = st.file_uploader("Choose a noisy audio file (.wav):", type='wav')
-
 st.divider()
-
 if uploaded_file is not None:
     file = {'file': uploaded_file}
     params = {'enhancer': enhancer}
@@ -42,12 +36,11 @@ if uploaded_file is not None:
     with col3:
         st.audio(uploaded_file)
     with col2:
-        with st.spinner(f"Enhancing with {enhancer.split('/')[1]}:"):
+        with st.spinner(f"Enhancing with {enhancer.split('/')[1]}..."):
             cleaned = requests.post(upload_url,
                                 files=file,
                                 data=params).json()
         st.success(f"Enhanced with {enhancer.split('/')[1]}:")
-        #st.write(f"Audio cleaned with {enhancer}:")
     with col4:
         req = urllib.request.urlopen(os.path.join(serve_out_url, cleaned['cleaned_file_name'])).read()
         st.audio(req)
