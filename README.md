@@ -1,2 +1,2 @@
 - FE build for streamlit for mic enhancer api test project (https://github.com/RomanZhvanskiy/microphone_enhancer_gh)
-- microphone picture "Microphone Sound Headphones royalty-free vector graphic. Free for use & download." from https://pixabay.com/vectors/microphone-sound-headphones-comic-162205/
+- microphone picture "Microphone Sound Headphones royalty-free vector graphic. Free for use & download." by OpenClipart-Vectors from https://pixabay.com/vectors/microphone-sound-headphones-comic-162205/
